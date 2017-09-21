@@ -12,7 +12,9 @@ SELECT * FROM emp WHERE comm>sal;
 SELECT * FROM emp WHERE comm>(sal*0.6);
 
 --5.找出部门10中所有经理(MANAGER) 和部门20中所有办事员（CLERK）的详细资料
-SELECT * FROM emp WHERE (deptno=10 AND job='MANAGER') OR (deptno=20 AND job='CLERK');
+SELECT * FROM emp WHERE
+  (deptno=10 AND job='MANAGER') OR
+  (deptno=20 AND job='CLERK');
 
 --6.找出部门10中所有经理，部门20中所有的办事员，既不是经理又不是办事员，但是薪金大于或等于2000的所有员工的资料：
 SELECT * FROM emp WHERE
